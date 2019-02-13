@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 /// A generic `String` based `CodingKey` implementation.
 public struct StringCodingKey: CodingKey {
     /// `CodingKey` conformance.
