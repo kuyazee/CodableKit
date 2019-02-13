@@ -24,7 +24,7 @@ pod 'Codable-Kit'
 
 Without Type Inference
 
-```
+```swift
 let decoder = JSONDecoder()
 do {
     let user = try decoder.decode(User.self, from: userData)
@@ -35,7 +35,7 @@ do {
 
 With Type Inference
 
-```
+```swift
 let decoder = FileDecoder(decoder: JSONDecoder(), bundle: .main, fileManager: .default)
 do {
     let user: User = try decoder.decode(userData)
@@ -49,7 +49,7 @@ do {
 
 Without Type Inference
 
-```
+```swift
 let decoder = FileDecoder(decoder: JSONDecoder(), bundle: .main, fileManager: .default)
 do {
     let user = try decoder.decode(User.self, from: File(name: "user", type: "json"))
@@ -60,7 +60,7 @@ do {
 
 With Type Inference
 
-```
+```swift
 let decoder = FileDecoder(decoder: JSONDecoder(), bundle: .main, fileManager: .default)
 do {
     let user: User = try decoder.decode(File(name: "user", type: "json"))
