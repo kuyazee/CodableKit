@@ -13,5 +13,4 @@ public protocol AnyEncoder {
 }
 
 extension JSONEncoder: AnyEncoder {}
-
 extension PropertyListEncoder: AnyEncoder {}

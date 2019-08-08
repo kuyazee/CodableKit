@@ -10,10 +10,10 @@ import Foundation
 
 open class FileDecoder: AnyFileDecoder {
     open var decoder: AnyDecoder
-    open var bundle: Bundle = .main
-    open var fileManager: FileManager = .default
+    open var bundle: Bundle
+    open var fileManager: FileManager
 
-    public init(decoder: AnyDecoder, bundle: Bundle = .main, fileManager: FileManager = .default) {
+    public init(decoder: AnyDecoder, bundle: Bundle, fileManager: FileManager) {
         self.decoder = decoder
         self.bundle = bundle
         self.fileManager = fileManager
@@ -34,28 +34,8 @@ open class FileDecoder: AnyFileDecoder {
 
         return try self.decoder.decode(type, from: data)
     }
-}
 
-open class JSONFileDecoder: AnyFileDecoder {
-    public let decoder: AnyFileDecoder
-
-    public init(decoder: AnyFileDecoder = FileDecoder(decoder: JSONDecoder())) {
-        self.decoder = decoder
-    }
-
-    open func decode<T>(_ type: T.Type, from file: File) throws -> T where T: Decodable {
-        return try self.decoder.decode(type, from: file)
-    }
-}
-
-class PropertyListFileDecoder: AnyFileDecoder {
-    public let decoder: AnyFileDecoder
-
-    public init(decoder: AnyFileDecoder = FileDecoder(decoder: PropertyListDecoder())) {
-        self.decoder = decoder
-    }
-
-    open func decode<T>(_ type: T.Type, from file: File) throws -> T where T: Decodable {
-        return try self.decoder.decode(type, from: file)
+    public func decode<T>(_ file: File) throws -> T where T : Decodable {
+        return try self.decode(T.self, from: file)
     }
 }

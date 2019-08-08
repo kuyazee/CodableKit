@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A64ED8B722FBE6F500EBC91B /* Codable-Kit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A64ED8B422FBE6F500EBC91B /* Codable-Kit.podspec */; };
+		A64ED8B822FBE6F500EBC91B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A64ED8B522FBE6F500EBC91B /* README.md */; };
+		A64ED8B922FBE6F500EBC91B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A64ED8B622FBE6F500EBC91B /* LICENSE */; };
+		A6727B69224870D400B9DDE1 /* NilError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6727B68224870D400B9DDE1 /* NilError.swift */; };
 		A6ACBF762213C4C000C1CF00 /* CodableKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ACBF742213C4C000C1CF00 /* CodableKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6ACBF7D2213C4D500C1CF00 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF7C2213C4D500C1CF00 /* File.swift */; };
 		A6ACBF7F2213C4E300C1CF00 /* FileDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF7E2213C4E300C1CF00 /* FileDecodingError.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A64ED8B422FBE6F500EBC91B /* Codable-Kit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Codable-Kit.podspec"; path = "../Codable-Kit.podspec"; sourceTree = "<group>"; };
+		A64ED8B522FBE6F500EBC91B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A64ED8B622FBE6F500EBC91B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A6727B68224870D400B9DDE1 /* NilError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NilError.swift; sourceTree = "<group>"; };
 		A6ACBF712213C4C000C1CF00 /* CodableKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6ACBF742213C4C000C1CF00 /* CodableKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodableKit.h; sourceTree = "<group>"; };
 		A6ACBF752213C4C000C1CF00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +52,9 @@
 		A6ACBF672213C4C000C1CF00 = {
 			isa = PBXGroup;
 			children = (
+				A64ED8B422FBE6F500EBC91B /* Codable-Kit.podspec */,
+				A64ED8B622FBE6F500EBC91B /* LICENSE */,
+				A64ED8B522FBE6F500EBC91B /* README.md */,
 				A6ACBF732213C4C000C1CF00 /* CodableKit */,
 				A6ACBF722213C4C000C1CF00 /* Products */,
 			);
@@ -69,6 +80,7 @@
 				A6ACBF872213C60E00C1CF00 /* FileDecoder.swift */,
 				A6ACBF7E2213C4E300C1CF00 /* FileDecodingError.swift */,
 				A6ACBF8B2213CA4600C1CF00 /* StringCodingKey.swift */,
+				A6727B68224870D400B9DDE1 /* NilError.swift */,
 			);
 			path = CodableKit;
 			sourceTree = "<group>";
@@ -116,7 +128,7 @@
 				TargetAttributes = {
 					A6ACBF702213C4C000C1CF00 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -142,6 +154,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A64ED8B922FBE6F500EBC91B /* LICENSE in Resources */,
+				A64ED8B822FBE6F500EBC91B /* README.md in Resources */,
+				A64ED8B722FBE6F500EBC91B /* Codable-Kit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +169,7 @@
 			files = (
 				A6ACBF7D2213C4D500C1CF00 /* File.swift in Sources */,
 				A6ACBF8C2213CA4600C1CF00 /* StringCodingKey.swift in Sources */,
+				A6727B69224870D400B9DDE1 /* NilError.swift in Sources */,
 				A6ACBF8A2213C70E00C1CF00 /* Extensions.swift in Sources */,
 				A6ACBF7F2213C4E300C1CF00 /* FileDecodingError.swift in Sources */,
 				A6ACBF862213C5CD00C1CF00 /* Encoder.swift in Sources */,
@@ -224,6 +240,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -281,6 +298,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -310,7 +328,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -337,7 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kuyazee.CodableKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
