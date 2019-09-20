@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19879318233473510002AF57 /* AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19879317233473510002AF57 /* AnyCodingKey.swift */; };
+		1987931A233473960002AF57 /* KeyedDecodingContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19879319233473960002AF57 /* KeyedDecodingContainerProtocol.swift */; };
+		1987931D233473BF0002AF57 /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987931C233473BF0002AF57 /* UserDefaults+Codable.swift */; };
+		1987931F233473DB0002AF57 /* Data+Decoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987931E233473DB0002AF57 /* Data+Decoded.swift */; };
+		19879321233474010002AF57 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19879320233474010002AF57 /* Decodable.swift */; };
+		19879323233474130002AF57 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19879322233474130002AF57 /* Encodable.swift */; };
+		19879326233474820002AF57 /* AnyFileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19879325233474820002AF57 /* AnyFileDecoder.swift */; };
+		1987932823349F380002AF57 /* KeyedEncodingContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987932723349F380002AF57 /* KeyedEncodingContainerProtocol.swift */; };
 		A64ED8B722FBE6F500EBC91B /* Codable-Kit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A64ED8B422FBE6F500EBC91B /* Codable-Kit.podspec */; };
 		A64ED8B822FBE6F500EBC91B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A64ED8B522FBE6F500EBC91B /* README.md */; };
 		A64ED8B922FBE6F500EBC91B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A64ED8B622FBE6F500EBC91B /* LICENSE */; };
@@ -14,14 +22,21 @@
 		A6ACBF762213C4C000C1CF00 /* CodableKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ACBF742213C4C000C1CF00 /* CodableKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6ACBF7D2213C4D500C1CF00 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF7C2213C4D500C1CF00 /* File.swift */; };
 		A6ACBF7F2213C4E300C1CF00 /* FileDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF7E2213C4E300C1CF00 /* FileDecodingError.swift */; };
-		A6ACBF812213C4F600C1CF00 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF802213C4F600C1CF00 /* Decoder.swift */; };
-		A6ACBF862213C5CD00C1CF00 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF852213C5CD00C1CF00 /* Encoder.swift */; };
+		A6ACBF812213C4F600C1CF00 /* AnyDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF802213C4F600C1CF00 /* AnyDecoder.swift */; };
+		A6ACBF862213C5CD00C1CF00 /* AnyEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF852213C5CD00C1CF00 /* AnyEncoder.swift */; };
 		A6ACBF882213C60E00C1CF00 /* FileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF872213C60E00C1CF00 /* FileDecoder.swift */; };
-		A6ACBF8A2213C70E00C1CF00 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF892213C70E00C1CF00 /* Extensions.swift */; };
 		A6ACBF8C2213CA4600C1CF00 /* StringCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ACBF8B2213CA4600C1CF00 /* StringCodingKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19879317233473510002AF57 /* AnyCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodingKey.swift; sourceTree = "<group>"; };
+		19879319233473960002AF57 /* KeyedDecodingContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerProtocol.swift; sourceTree = "<group>"; };
+		1987931C233473BF0002AF57 /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
+		1987931E233473DB0002AF57 /* Data+Decoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decoded.swift"; sourceTree = "<group>"; };
+		19879320233474010002AF57 /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		19879322233474130002AF57 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		19879325233474820002AF57 /* AnyFileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyFileDecoder.swift; sourceTree = "<group>"; };
+		1987932723349F380002AF57 /* KeyedEncodingContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedEncodingContainerProtocol.swift; sourceTree = "<group>"; };
 		A64ED8B422FBE6F500EBC91B /* Codable-Kit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Codable-Kit.podspec"; path = "../Codable-Kit.podspec"; sourceTree = "<group>"; };
 		A64ED8B522FBE6F500EBC91B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A64ED8B622FBE6F500EBC91B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -31,10 +46,9 @@
 		A6ACBF752213C4C000C1CF00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6ACBF7C2213C4D500C1CF00 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		A6ACBF7E2213C4E300C1CF00 /* FileDecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecodingError.swift; sourceTree = "<group>"; };
-		A6ACBF802213C4F600C1CF00 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
-		A6ACBF852213C5CD00C1CF00 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		A6ACBF802213C4F600C1CF00 /* AnyDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDecoder.swift; sourceTree = "<group>"; };
+		A6ACBF852213C5CD00C1CF00 /* AnyEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncoder.swift; sourceTree = "<group>"; };
 		A6ACBF872213C60E00C1CF00 /* FileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecoder.swift; sourceTree = "<group>"; };
-		A6ACBF892213C70E00C1CF00 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A6ACBF8B2213CA4600C1CF00 /* StringCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCodingKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +63,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1987931B233473B60002AF57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1987931E233473DB0002AF57 /* Data+Decoded.swift */,
+				19879320233474010002AF57 /* Decodable.swift */,
+				19879322233474130002AF57 /* Encodable.swift */,
+				19879319233473960002AF57 /* KeyedDecodingContainerProtocol.swift */,
+				1987931C233473BF0002AF57 /* UserDefaults+Codable.swift */,
+				1987932723349F380002AF57 /* KeyedEncodingContainerProtocol.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		198793242334746D0002AF57 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				19879317233473510002AF57 /* AnyCodingKey.swift */,
+				A6ACBF802213C4F600C1CF00 /* AnyDecoder.swift */,
+				A6ACBF852213C5CD00C1CF00 /* AnyEncoder.swift */,
+				19879325233474820002AF57 /* AnyFileDecoder.swift */,
+				A6ACBF7C2213C4D500C1CF00 /* File.swift */,
+				A6ACBF872213C60E00C1CF00 /* FileDecoder.swift */,
+				A6ACBF7E2213C4E300C1CF00 /* FileDecodingError.swift */,
+				A6727B68224870D400B9DDE1 /* NilError.swift */,
+				A6ACBF8B2213CA4600C1CF00 /* StringCodingKey.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		A6ACBF672213C4C000C1CF00 = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +116,8 @@
 			children = (
 				A6ACBF742213C4C000C1CF00 /* CodableKit.h */,
 				A6ACBF752213C4C000C1CF00 /* Info.plist */,
-				A6ACBF802213C4F600C1CF00 /* Decoder.swift */,
-				A6ACBF852213C5CD00C1CF00 /* Encoder.swift */,
-				A6ACBF892213C70E00C1CF00 /* Extensions.swift */,
-				A6ACBF7C2213C4D500C1CF00 /* File.swift */,
-				A6ACBF872213C60E00C1CF00 /* FileDecoder.swift */,
-				A6ACBF7E2213C4E300C1CF00 /* FileDecodingError.swift */,
-				A6ACBF8B2213CA4600C1CF00 /* StringCodingKey.swift */,
-				A6727B68224870D400B9DDE1 /* NilError.swift */,
+				1987931B233473B60002AF57 /* Extensions */,
+				198793242334746D0002AF57 /* Types */,
 			);
 			path = CodableKit;
 			sourceTree = "<group>";
@@ -138,6 +175,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = A6ACBF672213C4C000C1CF00;
 			productRefGroup = A6ACBF722213C4C000C1CF00 /* Products */;
@@ -168,12 +206,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6ACBF7D2213C4D500C1CF00 /* File.swift in Sources */,
+				19879323233474130002AF57 /* Encodable.swift in Sources */,
 				A6ACBF8C2213CA4600C1CF00 /* StringCodingKey.swift in Sources */,
+				19879318233473510002AF57 /* AnyCodingKey.swift in Sources */,
 				A6727B69224870D400B9DDE1 /* NilError.swift in Sources */,
-				A6ACBF8A2213C70E00C1CF00 /* Extensions.swift in Sources */,
+				19879321233474010002AF57 /* Decodable.swift in Sources */,
+				1987931D233473BF0002AF57 /* UserDefaults+Codable.swift in Sources */,
+				1987932823349F380002AF57 /* KeyedEncodingContainerProtocol.swift in Sources */,
 				A6ACBF7F2213C4E300C1CF00 /* FileDecodingError.swift in Sources */,
-				A6ACBF862213C5CD00C1CF00 /* Encoder.swift in Sources */,
-				A6ACBF812213C4F600C1CF00 /* Decoder.swift in Sources */,
+				A6ACBF862213C5CD00C1CF00 /* AnyEncoder.swift in Sources */,
+				19879326233474820002AF57 /* AnyFileDecoder.swift in Sources */,
+				1987931A233473960002AF57 /* KeyedDecodingContainerProtocol.swift in Sources */,
+				A6ACBF812213C4F600C1CF00 /* AnyDecoder.swift in Sources */,
+				1987931F233473DB0002AF57 /* Data+Decoded.swift in Sources */,
 				A6ACBF882213C60E00C1CF00 /* FileDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

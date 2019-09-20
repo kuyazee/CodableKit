@@ -23,16 +23,3 @@ extension AnyDecoder {
 extension JSONDecoder: AnyDecoder {}
 extension PropertyListDecoder: AnyDecoder {}
 
-public protocol AnyFileDecoder {
-    func decode<T: Decodable>(_ type: T.Type, from file: File) throws -> T
-
-    func decode<T: Decodable>(_ file: File) throws -> T
-}
-
-extension AnyFileDecoder {
-    public func decode<T>(_ file: File) throws -> T where T : Decodable {
-        return try self.decode(T.self, from: file)
-    }
-}
-
-

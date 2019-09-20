@@ -1,5 +1,5 @@
 //
-//  Encoder.swift
+//  AnyEncoder.swift
 //  CodableKit
 //
 //  Created by Zonily Jame Pesquera on 13/02/2019.
