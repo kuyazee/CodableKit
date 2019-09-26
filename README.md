@@ -136,23 +136,12 @@ do {
 This framework can also decode files from the app's bundle
 
 
-Without Type Inference
-
 ```swift
 let decoder = FileDecoder(decoder: JSONDecoder(), bundle: .main, fileManager: .default)
 do {
     let user = try decoder.decode(User.self, from: File(name: "user", type: "json"))
-} catch {
-    print(error)
-}
-```
-
-With Type Inference
-
-```swift
-let decoder = FileDecoder(decoder: JSONDecoder(), bundle: .main, fileManager: .default)
-do {
-    let user: User = try decoder.decode(File(name: "user", type: "json"))
+    
+    let user2: User = try decoder.decode(File(name: "user", type: "json"))
 } catch {
     print(error)
 }
