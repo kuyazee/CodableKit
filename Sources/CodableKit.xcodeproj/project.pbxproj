@@ -37,7 +37,7 @@
 		19879322233474130002AF57 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		19879325233474820002AF57 /* AnyFileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyFileDecoder.swift; sourceTree = "<group>"; };
 		1987932723349F380002AF57 /* KeyedEncodingContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedEncodingContainerProtocol.swift; sourceTree = "<group>"; };
-		A64ED8B422FBE6F500EBC91B /* Codable-Kit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Codable-Kit.podspec"; path = "../Codable-Kit.podspec"; sourceTree = "<group>"; };
+		A64ED8B422FBE6F500EBC91B /* Codable-Kit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; name = "Codable-Kit.podspec"; path = "../Codable-Kit.podspec"; sourceTree = "<group>"; };
 		A64ED8B522FBE6F500EBC91B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A64ED8B622FBE6F500EBC91B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A6727B68224870D400B9DDE1 /* NilError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NilError.swift; sourceTree = "<group>"; };

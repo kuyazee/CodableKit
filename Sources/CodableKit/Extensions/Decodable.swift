@@ -9,18 +9,27 @@
 import Foundation
 
 public extension Decodable {
-    init(data: Data, decoder: AnyDecoder = JSONDecoder()) throws {
+    /// Directly instantiate a Decodable object from `Data`
+    /// - Parameter data: The data containing the object that will be parsed
+    /// - Parameter decoder: `AnyDecoder` default value is `JSONDecoder()`
+    init(_ data: Data, decoder: AnyDecoder = JSONDecoder()) throws {
         self = try decoder.decode(Self.self, from: data)
     }
     
-    init(_ json: String, using encoding: String.Encoding, decoder: AnyDecoder = JSONDecoder()) throws {
+    /// Directly instantiate a Decodable object from a json `String`
+    /// - Parameter json: The json string that will be used
+    /// - Parameter encoding: The encoding for converting the string to data
+    /// - Parameter decoder: `AnyDecoder` default value is `JSONDecoder()`
+    init(_ json: String, using encoding: String.Encoding = .utf8, decoder: AnyDecoder = JSONDecoder()) throws {
         let data = try json.data(using: encoding).unwrap()
-        try self.init(data: data, decoder: decoder)
+        try self.init(data, decoder: decoder)
     }
     
-    init(fromURL url: String, decoder: AnyDecoder = JSONDecoder()) throws {
-        let url = try URL(string: url).unwrap()
+    /// Directly instantiate a Decodable object from a fileUrl `URL`
+    /// - Parameter url: The file url containing the data
+    /// - Parameter decoder: `AnyDecoder` default value is `JSONDecoder()`
+    init(_ url: URL, decoder: AnyDecoder = JSONDecoder()) throws {
         let data = try Data(contentsOf: url)
-        try self.init(data: data, decoder: decoder)
+        try self.init(data, decoder: decoder)
     }
 }
