@@ -12,8 +12,4 @@ public extension Data {
     func decoded<T: Decodable>(using decoder: AnyDecoder = JSONDecoder()) throws -> T {
         return try decoder.decode(T.self, from: self)
     }
-    
-    func string(encoding: String.Encoding = String.Encoding.utf8) -> String? {
-        return String(data: self, encoding: encoding)
-    }
 }
