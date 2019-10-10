@@ -3,11 +3,9 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-zjgpesquera-blue.svg)](https://www.linkedin.com/in/zjgpesquera/)
 [![Github](https://img.shields.io/badge/Github-kuyazee-blue.svg)](https://github.com/kuyazee)
 [![Cocoapods](https://img.shields.io/badge/Cocoapods-supported-red.svg)](http://cocoapods.org)
+[![Swift 5](https://img.shields.io/badge/Swift-5-orange)](https://swift.org)
 
-__CodableKit__ is available through the dependency manager [CocoaPods](http://cocoapods.org).
-
-===================
-
+A Swiftier [Codable](https://developer.apple.com/documentation/swift/codable) experience.
 __CodableKit__ is a library built to extend Swift's __Codable__.
 
 ## Features
@@ -25,6 +23,8 @@ __CodableKit__ is a library built to extend Swift's __Codable__.
 
 ## Installation
 
+__CodableKit__ is available through the dependency manager [CocoaPods](http://cocoapods.org).
+
 To install the CodableKit via cocoapods, simply use the add this in your podfile and then run `pod install`
 
 ```Cocoapods
@@ -36,7 +36,7 @@ pod 'Codable-Kit'
 Import CodableKit at the top of the Swift file that you will need to encode/decode objects
 
 ```swift
-import Codable_Kit`
+import Codable_Kit
 ```
 
 All your interactions with encoding/decoding will work with Swift's `Codable` protocol. This library is just a collection of extensions for improving the functionality of `Codable`.
@@ -122,10 +122,10 @@ struct FooModel: Codable {
 let decoder = JSONDecoder()
 do {
     let foo: FooModel = try decoder.decode(data)
-    print("dict:", dict)
-    print("array:", array)
-    print("optionalDict:", optionalDict)
-    print("optionalArray:", optionalArray)
+    print("dict:", foo.dict)
+    print("array:", foo.array)
+    print("optionalDict:", foo.optionalDict)
+    print("optionalArray:", foo.optionalArray)
 } catch {
     print(error)
 }
@@ -149,4 +149,4 @@ do {
 
 ## Licenses
 
-All source code is licensed under the MIT License.
+All source code is licensed under the [MIT License](https://github.com/kuyazee/CodableKit/blob/master/LICENSE).
