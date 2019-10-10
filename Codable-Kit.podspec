@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name          = "Codable-Kit"
-    s.version       = "0.0.8"
+    s.version       = "0.1.0"
     s.summary       = "CodableKit is a library built to extend Swift's Codable"
     s.description   = "CodableKit is a library built to extend Swift's Codable. Made in Swift 5"
     s.homepage      = "https://github.com/kuyazee/CodableKit"
