@@ -26,6 +26,10 @@ public extension KeyedDecodingContainerProtocol {
     
     // Collections
     
+    func decode(forKey key: Key) throws -> Any {
+        return try self.decode(Any.self, forKey: key)
+    }
+    
     func decode(forKey key: Key) throws -> [Any] {
         return try self.decode([Any].self, forKey: key)
     }
@@ -34,12 +38,22 @@ public extension KeyedDecodingContainerProtocol {
         return try self.decode([String: Any].self, forKey: key)
     }
     
+    
+    func decodeIfPresent(forKey key: Key) throws -> Any? {
+        return try self.decodeIfPresent(Any.self, forKey: key)
+    }
+    
     func decodeIfPresent(forKey key: Key) throws -> [Any]? {
         return try self.decodeIfPresent([Any].self, forKey: key)
     }
     
     func decodeIfPresent(forKey key: Key) throws -> [String: Any]? {
         return try self.decodeIfPresent([String: Any].self, forKey: key)
+    }
+    
+    
+    func decode(forKey key: Key, default defaultExpression: @autoclosure () -> Any) throws -> Any {
+        return try self.decodeIfPresent(Any.self, forKey: key) ?? defaultExpression()
     }
     
     func decode(forKey key: Key, default defaultExpression: @autoclosure () -> [Any]) throws -> [Any] {
@@ -54,13 +68,23 @@ public extension KeyedDecodingContainerProtocol {
 // MARK: - Normal
 
 public extension KeyedDecodingContainerProtocol {
+    func decode(_ type: Any.Type, forKey key: Key) throws -> Any {
+        var values = try self.nestedUnkeyedContainer(forKey: key)
+        return try values.decode(type)
+    }
+    
+    func decodeIfPresent(_ type: Any.Type, forKey key: Key) throws -> Any? {
+        guard self.contains(key), !(try self.decodeNil(forKey: key)) else { return nil }
+        return try self.decode(type, forKey: key)
+    }
+
     func decode(_ type: [Any].Type, forKey key: Key) throws -> [Any] {
-        var values = try nestedUnkeyedContainer(forKey: key)
+        var values = try self.nestedUnkeyedContainer(forKey: key)
         return try values.decode(type)
     }
     
     func decode(_ type: [String: Any].Type, forKey key: Key) throws -> [String: Any] {
-        let values = try nestedContainer(keyedBy: AnyCodingKey.self, forKey: key)
+        let values = try self.nestedContainer(keyedBy: AnyCodingKey.self, forKey: key)
         return try values.decode(type)
     }
     
@@ -98,6 +122,27 @@ public extension KeyedDecodingContainerProtocol {
 }
 
 private extension UnkeyedDecodingContainer {
+    mutating func decode(_ type: Any.Type) throws -> Any {
+        if try self.decodeNil() {
+            return NSNull()
+        } else if let int = try? self.decode(Int.self) {
+            return int
+        } else if let bool = try? self.decode(Bool.self) {
+            return bool
+        } else if let double = try? self.decode(Double.self) {
+            return double
+        } else if let string = try? self.decode(String.self) {
+            return string
+        } else if let values = try? self.nestedContainer(keyedBy: AnyCodingKey.self),
+            let element = try? values.decode([String: Any].self) {
+            return element
+        } else if var values = try? self.nestedUnkeyedContainer(),
+            let element = try? values.decode([Any].self) {
+            return element
+        }
+        return NSNull()
+    }
+    
     mutating func decode(_ type: [Any].Type) throws -> [Any] {
         var elements: [Any] = []
         while !self.isAtEnd {
